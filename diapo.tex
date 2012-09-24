@@ -1,0 +1,168 @@
+\documentclass{beamer}
+
+\usepackage[frenchb]{babel}
+\input{preambule} 
+
+% CSharp Listing config
+\usepackage{inconsolata}
+
+\lstset{language=[Sharp]C, 
+showspaces=false, 
+showtabs=false, 
+breaklines=true, 
+showstringspaces=false, 
+breakatwhitespace=true, 
+escapeinside={(*@}{@*)}, 
+commentstyle=\color{green}, 
+keywordstyle=\color{blue}\bfseries, 
+stringstyle=\color{red}, 
+basicstyle=\ttfamily 
+} 
+
+\begin{document}
+
+\title{Introduction au CSharp}
+\author{\textit{Raphael 'Shugo' Boissel} \and \textsc{GConfs}}
+\date{07 Octobre 2012}
+
+\begin{frame}
+  \begin{center}
+    \includegraphics[scale=0.35]{images/gconfs.png}
+  \end{center}
+
+  \maketitle
+\end{frame}
+
+\begin{frame}
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin{frame}
+  \begin{center}
+    \includegraphics[scale=0.50]{images/comp_nat.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \includegraphics[scale=0.40]{images/comp_bc.png}
+  \end{center}
+\end{frame}
+
+\section{Premier pas avec Visual Studio}
+
+\begin{frame}
+Live demo
+\end{frame}
+
+
+\section{L'imp\'eratif c'est quoi ?}
+\subsection{Mon ordinateur, mon esclave}
+\begin{frame}
+  \begin{center}
+    \includegraphics[scale=0.35]{images/esclave.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+
+	\item<1-> Fais moi un sandwich;
+	\item<2-> Fais la vaisselle;
+	\item<3-> Sors la poubelle;
+
+	\item<4-> Tant que (le sol est sale): \\
+	\{ Lave le sol; \} 
+
+	\item<5-> Si (il y a du courrier):\\
+	 \{Va chercher le courier; \} 
+    \end{itemize}
+\end{frame}
+
+\section{Le langage CSharp}
+\subsection{Les bases}
+\begin{frame}
+Les variables :
+	\begin{itemize}
+		\item<1-> \lstinline{int monAge = 21;}
+		\item<2-> \lstinline{float monAge = 21.0f;}
+		\item<3-> \lstinline{string monAge = "j'ai 21 ans";}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+Utiliser les variables :
+
+ 	\begin{center}
+		\begin{lstlisting}
+			int valueA = 10;
+			valueA = 42;
+		\end{lstlisting}
+	\end{center}
+
+ 	\begin{center}
+		\begin{lstlisting}
+			int valueB = 40;
+			valueB = valueB + 2;
+		\end{lstlisting}
+	\end{center}
+
+ 	\begin{center}
+		\begin{lstlisting}
+			string valueC = "Shugo";
+			valueC = "Hello " + valueC + "!";
+		\end{lstlisting}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}[fragile]
+@todo les structures de controles ...
+\end{frame}
+
+\subsection{Tout est objet,  ma petite amie aussi ?}
+\begin{frame}[fragile]
+Utiliser les objets :
+	\begin{center}
+		\begin{lstlisting}
+			Bitmap image = new Bitmap(512, 512);
+			image.setPixel(10, 10, Color.White);
+		\end{lstlisting}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+	\begin{table}
+	\centering 
+	\begin{tabular}{cc}
+		\begin{tabular}{c}\includegraphics[scale=0.10]{images/femme.png}\end{tabular} & 
+		\begin{tabular}{c}\lstinputlisting{girlfriend_1.cs}\end{tabular}
+	\end{tabular}
+	\end{table}
+\end{frame}
+
+\begin{frame}[fragile]
+	\begin{table}
+	\centering 
+	\begin{tabular}{cc}
+		\begin{tabular}{c}\includegraphics[scale=0.10]{images/femme.png}\end{tabular} & 
+		\begin{tabular}{c}\lstinputlisting{girlfriend_2.cs}\end{tabular}
+	\end{tabular}
+	\end{table}
+\end{frame}
+
+\begin{frame}[fragile]
+	\lstinputlisting{girlfriend_3.cs}
+
+	\only<2->{My boyfriend is Kevin and he loves my boobs} 
+
+	\only<3->{My boyfriend is Maxime and he loves my boobs}
+
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\end{document}

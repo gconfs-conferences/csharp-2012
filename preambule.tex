@@ -1,0 +1,115 @@
+% ************************
+% * fichier de pr�ambule *
+% ************************
+
+% ***** extensions *****
+\usepackage{beamerthemesplit}
+\usepackage[latin1]{inputenc}
+\usepackage[cyr]{aeguill}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{mathpazo}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ulem}
+% ***** c�sures particuli�res *****
+
+\hyphenation{}
+
+% ***** filigrane *****
+\newcommand{\makefiligrane}
+{
+   \usepackage{eso-pic,rotating}
+   \AddToShipoutPicture{%
+   \unitlength 1cm
+   \put(11,15){%
+   \begin{rotate}{45}
+   \makebox(0,0){\color{lightgray}\scalebox{3.5}{\Huge BROUILLON}}
+   \end{rotate}}
+   }
+}
+
+% ***** couleurs perso *****
+
+\definecolor{gris}{HTML}{606060}
+\definecolor{gris-clair}{rgb}{0.9,0.9,0.9}
+\definecolor{orange}{rgb}{1,0.5,0.25}
+
+\definecolor{lightgray}{RGB}{240,240,240}
+
+\definecolor{vert}{RGB}{0,176,80}
+\definecolor{verta}{RGB}{79,97,40}
+\definecolor{vertb}{RGB}{195,214,155}
+\definecolor{vertc}{RGB}{235,241,221}
+\definecolor{bleua}{RGB}{31,73,125}
+\definecolor{bleub}{RGB}{219,229,241}
+\definecolor{rougea}{RGB}{192,80,77}
+\definecolor{rougeb}{RGB}{242,220,219}
+\definecolor{orangea}{RGB}{233,132,45}
+\definecolor{orangeb}{RGB}{188,84,7}
+
+\definecolor{brown}{RGB}{128,0,0}
+\definecolor{blue}{RGB}{0,0,255}
+\definecolor{green}{RGB}{0,128,0}
+\definecolor{seagreen}{RGB}{69,158,181}
+
+% ***** param�tre de la coloration syntaxique *****
+\newcommand{\lstsetparams}[4]
+{
+    \lstset{
+	language=[#1]#2,basicstyle=\ttfamily\footnotesize,%
+	stringstyle=\ttfamily\color{brown},commentstyle=\color{green},%
+	%numberstyle=\footnotesize,stepnumber=1,numbersep=7pt,%
+	backgroundcolor=\color{vertc},frame=single,tabsize=2,breaklines=true,%
+	breakatwhitespace=false,%
+	classoffset=0,% Mots cl�s non reconnus
+	morekeywords={#3},keywordstyle=\color{blue},%
+	classoffset=1,% Noms de classes
+	morekeywords={#4},keywordstyle=\color{seagreen},%
+	classoffset=0
+    }
+}
+
+% ***** param�tres de Beamer *****
+\usetheme{Darmstadt} %%% Th�me que j'ai choisi pour les slides
+
+\setbeamercovered{transparent}
+\setbeamercolor{structure}{bg=black,fg=orangea} %% personalisation des couleurs, bleu par d�faut
+
+% ***** commandes personnelles *****
+
+\newcommand{\tp}{workshop}
+\newcommand{\Tp}{Workshop}
+
+% ***** langages *****
+
+\lstdefinelanguage{CSharp}
+{ morecomment = [l]{//}, 
+morecomment = [l]{///},
+morecomment = [s]{/*}{*/},
+morestring=[b]",
+ sensitive = true,
+morekeywords = 
+{abstract,  event,  new,  struct,
+as,  explicit,  null,  switch,   base, 
+extern,  object,  this,   bool,  false, 
+operator,  throw,   break,  finally,  out, 
+true,   byte,  fixed,  override,  try,   case,
+ float,  params,  typeof,   catch,  for,  private, 
+uint,   char,  foreach,  protected,  ulong,
+ checked,  goto,  public,  unchecked,   class, 
+if,  readonly,  unsafe,   const,  implicit,  ref,
+ ushort,   continue,  in,  return,  using,   decimal,
+ int,  sbyte,  virtual,   default,  interface,  sealed, 
+volatile,   delegate,  internal,  short,  void,   do, 
+is,  sizeof,  while,   double,  lock,  stackalloc, 
+ else,  long,  static,      enum,  namespace,  string},
+moredelim=**[is][\only<+>{\color{red}}]{@}{@},
+}
+
+%\setcounter{tocdepth}{2}
