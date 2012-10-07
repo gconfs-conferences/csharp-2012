@@ -118,9 +118,61 @@ Utiliser les variables :
 
 \end{frame}
 
+\subsection{Les structures de controle}
 \begin{frame}[fragile]
-@todo les structures de controles ...
+Le test:
+		\begin{lstlisting}
+			string myName = "Shugo";
+			if (myName == "Shugo")
+			{
+ 				console.writeLine("Hello Shugo");
+			}
+			else
+			{
+ 				console.writeLine("I don't know you");
+			}
+		\end{lstlisting}
+
 \end{frame}
+
+\begin{frame}[fragile]
+Le test:
+		\begin{lstlisting}
+			string myName = "Shugo";
+			if (myName != "Shugo")
+			{
+ 				console.writeLine("You are not Shugo");
+			}
+			else
+			{
+ 				console.writeLine("You are Shugo");
+			}
+		\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+La boucle for:
+		\begin{lstlisting}
+		for (int n = 0; n <  10; n++)
+		{
+ 			console.writeLine(n);
+		}
+		\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+La boucle while:
+		\begin{lstlisting}
+		int n = 0;
+		while (n < 10)
+		{
+ 			console.writeLine(n);
+ 			n = n + 1;
+		}
+		\end{lstlisting}
+\end{frame}
+
 
 \subsection{Tout est objet,  ma petite amie aussi ?}
 \begin{frame}[fragile]
@@ -163,6 +215,7 @@ Utiliser les objets :
 \end{frame}
 
 \begin{frame}
+Questions, remarques, choses pas claires ?
 \end{frame}
 
 \end{document}
