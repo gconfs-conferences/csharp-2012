@@ -120,7 +120,13 @@ Utiliser les variables :
 
 \end{frame}
 
-\subsection{Les structures de controle}
+\subsection{Les structures de contr\^{o}le it\'{e}ratives}
+\begin{frame}[fragile]
+    \begin{center}
+        \Huge{Les structures de contr\^{o}le it\'{e}ratives}
+    \end{center}
+\end{frame}
+
 \begin{frame}[fragile]
 Le test:
 		\begin{lstlisting}
@@ -175,10 +181,39 @@ La boucle while:
 		\end{lstlisting}
 \end{frame}
 
+\subsection{La factorisation}
+\begin{frame}[fragile]
+    \begin{center}
+        \huge{La factorisation}
+    \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+        \lstinputlisting{function.cs}
+	\only<2->{\lstinputlisting{call_fun.cs}}
+\end{frame}
+
+\begin{frame}[fragile]
+        \lstinputlisting{procedure.cs}
+	\only<2->{\lstinputlisting{call_proc.cs}}
+\end{frame}
 
 \subsection{Tout est objet,  ma petite amie aussi ?}
 \begin{frame}[fragile]
-Utiliser les objets :
+    \begin{center}
+        \huge{Tout est objet, ma petite amie aussi ?}
+    \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+    \begin{center}
+        Qu'est-ce qu'un objet ?\newline\newline
+        \includegraphics[scale=0.4]{images/objet.jpg}
+    \end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+Exemple d'utilisation d'un objet, le Bitmap :
 	\begin{center}
 		\begin{lstlisting}
 			Bitmap image = new Bitmap(512, 512);
@@ -186,6 +221,23 @@ Utiliser les objets :
 		\end{lstlisting}
 	\end{center}
 \end{frame}
+
+
+\begin{frame}[fragile]
+Utilisation des tableaux
+	\lstinputlisting{array.cs}
+\end{frame}
+
+\begin{frame}[fragile]
+Un tableau est un objet !
+        \begin{tabular}{c}\includegraphics[scale=0.8]{images/array_methods.png}\end{tabular} 
+\end{frame}
+
+\begin{frame}[fragile]
+Un entier est un objet !
+        \begin{tabular}{c}\includegraphics[scale=0.8]{images/int_methods.png}\end{tabular} 
+\end{frame}
+
 
 \begin{frame}[fragile]
 	\begin{table}
@@ -197,24 +249,23 @@ Utiliser les objets :
 	\end{table}
 \end{frame}
 
+
 \begin{frame}[fragile]
 	\begin{table}
 	\centering 
 	\begin{tabular}{cc}
 		\begin{tabular}{c}\includegraphics[scale=0.10]{images/femme.png}\end{tabular} & 
-		\begin{tabular}{c}\lstinputlisting{girlfriend_2.cs}\end{tabular}
+		\begin{tabular}{c}\lstinputlisting[basicstyle=\footnotesize]{girlfriend_2.cs}\end{tabular}
 	\end{tabular}
 	\end{table}
 \end{frame}
-
 \begin{frame}[fragile]
 	\lstinputlisting{girlfriend_3.cs}
-
 	\only<2->{My boyfriend is Kevin and he loves my boobs} 
 
 	\only<3->{My boyfriend is Maxime and he loves my boobs}
-
 \end{frame}
+
 
 \begin{frame}[fragile]
         \lstinputlisting{vector.cs}

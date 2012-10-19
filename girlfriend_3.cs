@@ -1,7 +1,7 @@
 Girlfriend flora = new Girlfriend();
-flora.setBoyFriendName("Kevin");
+flora.setBfName("Kevin");
 Girlfriend estelle = new Girlfriend();
-estelle.setBoyFriendName("maxime");
+estelle.setBfName("maxime");
 
 flora.saySomething();
 estelle.saySometing();
